@@ -3,6 +3,7 @@ import pytest
 from physics_toolkit.units import (
     celsius_to_fahrenheit,
     celsius_to_kelvin,
+    fahrenheit_to_celsius,
     kelvin_to_celsius,
 )
 
@@ -36,6 +37,15 @@ def test_celsius_to_fahrenheit_equal_scales():
 
 def test_celsius_to_fahrenheit_absolute_zero():
     assert celsius_to_fahrenheit(-273.15) == pytest.approx(-459.67)
-
     
- 
+def test_fahrenheit_to_celsius_freezing_point():
+    assert fahrenheit_to_celsius(32) == 0
+
+def test_fahrenheit_to_celsius_boiling_point():
+    assert fahrenheit_to_celsius(212) == 100
+
+def test_fahrenheit_to_celsius_equal_scales():
+    assert fahrenheit_to_celsius(-40) == -40
+
+def test_fahrenheit_to_celsius_absolute_zero():
+    assert  fahrenheit_to_celsius(-459.67) == pytest.approx(-273.15)

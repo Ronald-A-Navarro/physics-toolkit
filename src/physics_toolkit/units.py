@@ -5,6 +5,7 @@ Unit conversion utilities.
 CELSIUS_TO_KELVIN_OFFSET = 273.15
 
 FAHRENHEIT_OFFSET = 32.0
+
 CELSIUS_TO_FAHRENHEIT_SCALE = 9 / 5
 
 
@@ -58,3 +59,23 @@ def celsius_to_fahrenheit(celsius: float) -> float:
         celsius * CELSIUS_TO_FAHRENHEIT_SCALE 
         + FAHRENHEIT_OFFSET
     )
+
+def fahrenheit_to_celsius(fahrenheit: float) -> float:
+    """
+    Convert a temperature from Fahrenheit to Celsius.
+
+    Parameters
+    ----------
+    celsius : float
+        Temperature in degrees Fahrenheit.
+
+    Returns
+    -------
+    float
+        Temperature in degrees Celsius.
+    """
+    return (
+        (fahrenheit - FAHRENHEIT_OFFSET)
+        / CELSIUS_TO_FAHRENHEIT_SCALE
+    )
+    

@@ -78,4 +78,21 @@ def fahrenheit_to_celsius(fahrenheit: float) -> float:
         (fahrenheit - FAHRENHEIT_OFFSET)
         / CELSIUS_TO_FAHRENHEIT_SCALE
     )
-    
+
+def fahrenheit_to_kelvin(fahrenheit: float) -> float:
+    """
+    Convert a temperature from Fahrenheit to Kelvin.
+
+    Parameters
+    ----------
+    fahrenheit : float
+        Temperature in degrees Fahrenheit.
+
+    Returns
+    -------
+    float
+        Temperature in Kelvin.
+    """
+    return celsius_to_kelvin(
+        fahrenheit_to_celsius(fahrenheit)
+    )

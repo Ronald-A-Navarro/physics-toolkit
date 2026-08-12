@@ -9,6 +9,7 @@ from physics_toolkit.units import (
     kelvin_to_fahrenheit,
     kilometers_to_meters,
     meters_to_kilometers,
+    miles_to_kilometers,
 )
 
 
@@ -111,3 +112,19 @@ def test_kilometers_to_meters_decimal():
 
 def test_kilometers_to_meters_marathon():
     assert kilometers_to_meters(42.195) == 42195
+
+
+def test_miles_to_kilometers_zero():
+    assert miles_to_kilometers(0) == 0
+
+
+def test_miles_to_kilometers_one():
+    assert miles_to_kilometers(1) == pytest.approx(1.609344)
+
+
+def test_miles_to_kilometers_decimal():
+    assert miles_to_kilometers(2.5) == pytest.approx(4.02336)
+
+
+def test_miles_to_kilometers_marathon():
+    assert miles_to_kilometers(26.21875) == pytest.approx(42.195)

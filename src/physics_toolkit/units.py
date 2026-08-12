@@ -119,6 +119,8 @@ def kelvin_to_fahrenheit(kelvin: float) -> float:
 
 # Length
 
+MILES_TO_KILOMETERS = 1.609344
+
 def meters_to_kilometers(meters: float) -> float:
     """
     Convert a length from meters to kilometers.
@@ -150,3 +152,19 @@ def kilometers_to_meters (kilometers: float) -> float:
         Length in meters.
     """
     return kilometers * 1000
+
+def miles_to_kilometers(miles: float) -> float:
+    """
+    Convert a length from miles to kilometers.
+    
+        Parameters
+        ----------
+        miles: float
+            Length in miles.
+        
+        Returns
+        -------
+        float
+            Length in kilometers.
+    """
+    return miles * MILES_TO_KILOMETERS

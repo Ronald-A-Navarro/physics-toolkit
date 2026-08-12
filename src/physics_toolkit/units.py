@@ -2,6 +2,8 @@
 Unit conversion utilities.
 """
 
+# Temperature
+
 CELSIUS_TO_KELVIN_OFFSET = 273.15
 
 FAHRENHEIT_OFFSET = 32.0
@@ -114,3 +116,21 @@ def kelvin_to_fahrenheit(kelvin: float) -> float:
     return celsius_to_fahrenheit(
         kelvin_to_celsius(kelvin)
     )
+
+# Length
+
+def meters_to_kilometers(meters: float) -> float:
+    """
+    Convert a length from meters to kilometers.
+
+    Parameters
+    ----------
+    meters: float
+        Length in meters.
+    
+    Returns
+    -------
+    float
+        Length in Kilometers.
+    """
+    return meters / 1000

@@ -7,6 +7,7 @@ from physics_toolkit.units import (
     fahrenheit_to_kelvin,
     kelvin_to_celsius,
     kelvin_to_fahrenheit,
+    kilometers_to_meters,
     meters_to_kilometers,
 )
 
@@ -83,13 +84,30 @@ def test_kelvin_to_fahrenheit_boiling_point():
 def test_meters_to_kilometers_zero():
     assert meters_to_kilometers(0) == 0
 
+
 def test_meters_to_kilometers_one_kilometer():
     assert meters_to_kilometers(1000) == 1
 
+
 def test_meters_to_kilometers_fractional():
     assert meters_to_kilometers(2500) == 2.5
+
 
 def test_meters_to_kilometers_marathon():
     assert meters_to_kilometers(42195) == 42.195
     
 
+def test_kilometers_to_meters_zero():
+    assert kilometers_to_meters(0) == 0
+
+
+def test_kilometers_to_meters_one():
+    assert kilometers_to_meters(1) == 1000
+
+
+def test_kilometers_to_meters_decimal():
+    assert kilometers_to_meters(2.5) == 2500
+
+
+def test_kilometers_to_meters_marathon():
+    assert kilometers_to_meters(42.195) == 42195

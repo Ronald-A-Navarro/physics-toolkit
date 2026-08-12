@@ -134,3 +134,19 @@ def meters_to_kilometers(meters: float) -> float:
         Length in Kilometers.
     """
     return meters / 1000
+
+def kilometers_to_meters (kilometers: float) -> float:
+    """
+    Convert a length from kilometers to meters.
+
+    Parameters
+    ----------
+    kilometers: float
+        Length in kilometers.
+    
+    Returns
+    -------
+    float
+        Length in meters.
+    """
+    return kilometers * 1000

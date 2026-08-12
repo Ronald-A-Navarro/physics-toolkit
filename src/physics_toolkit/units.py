@@ -168,3 +168,19 @@ def miles_to_kilometers(miles: float) -> float:
             Length in kilometers.
     """
     return miles * MILES_TO_KILOMETERS
+
+def kilometers_to_miles (kilometers: float) -> float:
+    """
+    Convert a length from kilometers to miles.
+        
+            Parameters
+            ----------
+            kilometers: float
+                Length in kilometers.
+            
+            Returns
+            -------
+            float
+                Length in miles.
+    """
+    return kilometers / MILES_TO_KILOMETERS

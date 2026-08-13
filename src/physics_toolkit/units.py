@@ -203,3 +203,19 @@ def centimeters_to_inches(centimeters: float) -> float:
     """
 
     return centimeters / CENTIMETERS_PER_INCH
+
+def inches_to_centimeters(inches: float) -> float:
+    """
+    Convert a length from inches to centimeters.
+
+    Parameters
+    ----------
+    inches : float
+        Length in inches.
+
+    Returns
+    -------
+    float
+        Length in centimeters.
+    """
+    return inches * CENTIMETERS_PER_INCH

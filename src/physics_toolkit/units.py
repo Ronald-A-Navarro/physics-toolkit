@@ -121,6 +121,8 @@ def kelvin_to_fahrenheit(kelvin: float) -> float:
 
 MILES_TO_KILOMETERS = 1.609344
 
+CENTIMETERS_PER_INCH = 2.54
+
 def meters_to_kilometers(meters: float) -> float:
     """
     Convert a length from meters to kilometers.
@@ -184,3 +186,20 @@ def kilometers_to_miles (kilometers: float) -> float:
                 Length in miles.
     """
     return kilometers / MILES_TO_KILOMETERS
+
+def centimeters_to_inches(centimeters: float) -> float:
+    """
+     Convert a length from centimeters to inches.
+            
+                Parameters
+                ----------
+                centimeters: float
+                    Length in centimeters.
+                
+                Returns
+                -------
+                float
+                    Length in inches.
+    """
+
+    return centimeters / CENTIMETERS_PER_INCH

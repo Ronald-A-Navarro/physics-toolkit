@@ -3,6 +3,7 @@ import pytest
 from physics_toolkit.units import (
     celsius_to_fahrenheit,
     celsius_to_kelvin,
+    centimeters_to_inches,
     fahrenheit_to_celsius,
     fahrenheit_to_kelvin,
     kelvin_to_celsius,
@@ -145,3 +146,19 @@ def test_kilometers_to_miles_decimal():
 
 def test_kilometers_to_miles_marathon():
     assert kilometers_to_miles(42.195) == pytest.approx(26.21875)
+
+
+def test_centimeters_to_inches_zero():
+    assert centimeters_to_inches(0) == 0
+
+
+def test_centimeters_to_inches_one():
+    assert centimeters_to_inches(2.54) == pytest.approx(1)
+
+
+def test_centimeters_to_inches_two():
+    assert centimeters_to_inches(5.08) == pytest.approx(2)
+
+
+def test_centimeters_to_inches_foot():
+    assert centimeters_to_inches(30.48) == pytest.approx(12)

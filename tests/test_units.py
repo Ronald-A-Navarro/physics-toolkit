@@ -4,6 +4,7 @@ from physics_toolkit.units import (
     celsius_to_fahrenheit,
     celsius_to_kelvin,
     centimeters_to_inches,
+    centimeters_to_meters,
     fahrenheit_to_celsius,
     fahrenheit_to_kelvin,
     inches_to_centimeters,
@@ -179,3 +180,27 @@ def test_inches_to_centimeters_two():
 
 def test_inches_to_centimeters_foot():
     assert inches_to_centimeters(12) == pytest.approx(30.48)
+
+
+def test_centimeters_to_meters_zero():
+    assert centimeters_to_meters(0) == 0
+
+
+def test_centimeters_to_meters_one():
+    assert centimeters_to_meters(1) == 0.01
+
+
+def test_centimeters_to_meters_hundred():
+    assert centimeters_to_meters(100) == 1
+
+
+def test_centimeters_to_meters_over_hundred():
+    assert centimeters_to_meters(345) == 3.45
+
+
+def test_centimeters_to_meters_below_hundred():
+    assert centimeters_to_meters(46) == 0.46
+
+
+
+

@@ -219,3 +219,20 @@ def inches_to_centimeters(inches: float) -> float:
         Length in centimeters.
     """
     return inches * CENTIMETERS_PER_INCH
+
+def centimeters_to_meters(centimeters: float) -> float:
+    """
+    Convert a length from centimeters to meters.
+
+    Parameters
+    ----------
+    centimeters : float
+        Length in centimeters.
+
+    Returns
+    -------
+    float
+        Length in meters.
+    """
+    return centimeters / 100
+

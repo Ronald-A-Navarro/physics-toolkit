@@ -236,3 +236,18 @@ def centimeters_to_meters(centimeters: float) -> float:
     """
     return centimeters / 100
 
+def meters_to_centimeters(meters: float) -> float:
+    """
+        Convert a length from meters to centimeters.
+    
+        Parameters
+        ----------
+        meters : float
+            Length in meters.
+    
+        Returns
+        -------
+        float
+            Length in centimeters.
+        """
+    return meters * 100

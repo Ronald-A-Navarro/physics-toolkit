@@ -12,6 +12,7 @@ from physics_toolkit.units import (
     kelvin_to_fahrenheit,
     kilometers_to_meters,
     kilometers_to_miles,
+    meters_to_centimeters,
     meters_to_kilometers,
     miles_to_kilometers,
 )
@@ -202,5 +203,23 @@ def test_centimeters_to_meters_below_hundred():
     assert centimeters_to_meters(46) == 0.46
 
 
+def test_meters_to_centimeters_zero():
+    assert meters_to_centimeters(0) == 0
+
+
+def test_meters_to_centimeters_below_one():
+    assert meters_to_centimeters(0.01) == 1
+
+
+def test_meters_to_centimeters_one():
+    assert meters_to_centimeters(1) == 100
+
+
+def test_meters_to_centimeters_over_one():
+    assert meters_to_centimeters(3.45) == 345
+
+
+def test_meters_to_centimeters_below_one_meter():
+    assert meters_to_centimeters(0.46) == 46
 
 

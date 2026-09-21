@@ -7,12 +7,14 @@ from physics_toolkit.units import (
     centimeters_to_meters,
     fahrenheit_to_celsius,
     fahrenheit_to_kelvin,
+    feet_to_meters,
     inches_to_centimeters,
     kelvin_to_celsius,
     kelvin_to_fahrenheit,
     kilometers_to_meters,
     kilometers_to_miles,
     meters_to_centimeters,
+    meters_to_feet,
     meters_to_kilometers,
     miles_to_kilometers,
 )
@@ -223,3 +225,33 @@ def test_meters_to_centimeters_below_one_meter():
     assert meters_to_centimeters(0.46) == 46
 
 
+def test_feet_to_meters_zero():
+    assert feet_to_meters(0) == 0
+
+
+def test_feet_to_meters_one():
+    assert feet_to_meters(1) == pytest.approx(0.3048)
+
+
+def test_feet_to_meters_two():
+    assert feet_to_meters(2) == pytest.approx(0.6096)
+
+
+def test_feet_to_meters_ten():
+    assert feet_to_meters(10) == pytest.approx(3.048)
+
+
+def test_meters_to_feet_zero():
+    assert meters_to_feet(0) == 0
+
+
+def test_meters_to_feet_one():
+    assert meters_to_feet(0.3048) == pytest.approx(1)
+
+
+def test_meters_to_feet_two():
+    assert meters_to_feet(0.6096) == pytest.approx(2)
+
+
+def test_meters_to_feet_ten():
+    assert meters_to_feet(3.048) == pytest.approx(10)

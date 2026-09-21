@@ -123,6 +123,8 @@ MILES_TO_KILOMETERS = 1.609344
 
 CENTIMETERS_PER_INCH = 2.54
 
+METERS_PER_FOOT = 0.3048
+
 def meters_to_kilometers(meters: float) -> float:
     """
     Convert a length from meters to kilometers.
@@ -251,3 +253,36 @@ def meters_to_centimeters(meters: float) -> float:
             Length in centimeters.
         """
     return meters * 100
+
+
+def feet_to_meters(feet: float) -> float:
+    """
+            Convert a length from feet to meters.
+        
+            Parameters
+            ----------
+            feet : float
+                Length in feet.
+        
+            Returns
+            -------
+            float
+                Length in meters.
+            """
+    return feet * METERS_PER_FOOT
+
+def meters_to_feet(meters: float) -> float:
+    """
+            Convert a length from meters to feet.
+            
+            Parameters
+            ----------
+            meters : float
+                Length in meters.
+            
+            Returns
+            -------
+            float
+                Length in feet.
+            """
+    return meters / METERS_PER_FOOT

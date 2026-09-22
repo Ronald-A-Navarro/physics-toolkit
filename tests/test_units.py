@@ -8,6 +8,7 @@ from physics_toolkit.units import (
     fahrenheit_to_celsius,
     fahrenheit_to_kelvin,
     feet_to_meters,
+    grams_to_kilograms,
     inches_to_centimeters,
     kelvin_to_celsius,
     kelvin_to_fahrenheit,
@@ -276,3 +277,23 @@ def test_kilograms_to_grams_below_thousand():
 
 def test_kilograms_to_grams_above_thousand():
     assert kilograms_to_grams(1500) == 1500000
+
+
+def test_grams_to_kilograms_zero():
+    assert grams_to_kilograms(0) == 0
+
+
+def test_grams_to_kilograms_one():
+    assert grams_to_kilograms(1000) == 1
+
+
+def test_grams_to_kilograms_ten():
+    assert grams_to_kilograms(10000) == 10
+
+
+def test_grams_to_kilograms_below_thousand():
+    assert grams_to_kilograms(500000) == 500
+
+
+def test_grams_to_kilograms_above_thousand():
+    assert grams_to_kilograms(1500000) == 1500

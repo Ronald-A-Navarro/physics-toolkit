@@ -286,3 +286,37 @@ def meters_to_feet(meters: float) -> float:
                 Length in feet.
             """
     return meters / METERS_PER_FOOT
+
+# Mass
+
+def kilograms_to_grams(kilograms: float) -> float:
+    """
+                Convert mass from kilograms to grams.
+                
+                Parameters
+                ----------
+                kilograms : float
+                    mass in kilograms.
+                
+                Returns
+                -------
+                float
+                    mass in grams.
+                """
+    return kilograms * 1000
+
+def grams_to_kilograms(grams: float) -> float:
+    """
+                Convert mass from grams to kilograms.
+                
+                Parameters
+                ----------
+                grams : float
+                    mass in grams.
+                
+                Returns
+                -------
+                float
+                    mass in kilograms.
+                """
+    return grams / 1000

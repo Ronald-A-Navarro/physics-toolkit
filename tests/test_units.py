@@ -11,6 +11,7 @@ from physics_toolkit.units import (
     inches_to_centimeters,
     kelvin_to_celsius,
     kelvin_to_fahrenheit,
+    kilograms_to_grams,
     kilometers_to_meters,
     kilometers_to_miles,
     meters_to_centimeters,
@@ -255,3 +256,23 @@ def test_meters_to_feet_two():
 
 def test_meters_to_feet_ten():
     assert meters_to_feet(3.048) == pytest.approx(10)
+
+
+def test_kilograms_to_grams_zero():
+    assert kilograms_to_grams(0) == 0
+
+
+def test_kilograms_to_grams_one():
+    assert kilograms_to_grams(1) == 1000
+
+
+def test_kilograms_to_grams_ten():
+    assert kilograms_to_grams(10) == 10000
+
+
+def test_kilograms_to_grams_below_thousand():
+    assert kilograms_to_grams(500) == 500000
+
+
+def test_kilograms_to_grams_above_thousand():
+    assert kilograms_to_grams(1500) == 1500000

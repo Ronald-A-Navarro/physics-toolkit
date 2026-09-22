@@ -20,6 +20,7 @@ from physics_toolkit.units import (
     meters_to_feet,
     meters_to_kilometers,
     miles_to_kilometers,
+    pounds_to_kilograms,
 )
 
 
@@ -318,3 +319,23 @@ def test_kilograms_to_pounds_below_hundred():
 
 def test_kilograms_to_pounds_above_hundred():
     assert kilograms_to_pounds(120) == pytest.approx(264.5547148)
+
+
+def test_pounds_to_kilograms_zero():
+    assert pounds_to_kilograms(0) == 0
+
+
+def test_pounds_to_kilograms_one():
+    assert pounds_to_kilograms(2.20462262) == pytest.approx(1)
+
+
+def test_pounds_to_kilograms_ten():
+    assert pounds_to_kilograms(22.0462262) == pytest.approx(10)
+
+
+def test_pounds_to_kilograms_below_hundred():
+    assert pounds_to_kilograms(99.2080179) == pytest.approx(45)
+
+
+def test_pounds_to_kilograms_above_hundred():
+    assert pounds_to_kilograms(264.5547148) == pytest.approx(120)

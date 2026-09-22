@@ -338,3 +338,19 @@ def kilograms_to_pounds(kilograms: float) -> float:
         mass in pounds.
     """
     return kilograms / KILOGRAMS_PER_POUND
+
+def pounds_to_kilograms(pounds: float) -> float:
+    """
+    Convert mass from pounds to kilograms.
+
+    Parameters
+    ----------
+    pounds : float
+        mass in pounds.
+
+    Returns
+    -------
+    float
+        mass in kilograms.
+    """
+    return pounds * KILOGRAMS_PER_POUND

@@ -13,6 +13,7 @@ from physics_toolkit.units import (
     kelvin_to_celsius,
     kelvin_to_fahrenheit,
     kilograms_to_grams,
+    kilograms_to_pounds,
     kilometers_to_meters,
     kilometers_to_miles,
     meters_to_centimeters,
@@ -297,3 +298,23 @@ def test_grams_to_kilograms_below_thousand():
 
 def test_grams_to_kilograms_above_thousand():
     assert grams_to_kilograms(1500000) == 1500
+
+
+def test_kilograms_to_pounds_zero():
+    assert kilograms_to_pounds(0) == 0
+
+
+def test_kilograms_to_pounds_one():
+    assert kilograms_to_pounds(1) == pytest.approx(2.20462262)
+
+
+def test_kilograms_to_pounds_ten():
+    assert kilograms_to_pounds(10) == pytest.approx(22.0462262)
+
+
+def test_kilograms_to_pounds_below_hundred():
+    assert kilograms_to_pounds(45) == pytest.approx(99.2080179)
+
+
+def test_kilograms_to_pounds_above_hundred():
+    assert kilograms_to_pounds(120) == pytest.approx(264.5547148)

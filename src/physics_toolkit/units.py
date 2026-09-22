@@ -161,15 +161,15 @@ def miles_to_kilometers(miles: float) -> float:
     """
     Convert a length from miles to kilometers.
     
-        Parameters
-        ----------
-        miles: float
-            Length in miles.
+    Parameters
+    ----------
+    miles: float
+        Length in miles.
         
-        Returns
-        -------
-        float
-            Length in kilometers.
+    Returns
+    -------
+    float
+        Length in kilometers.
     """
     return miles * MILES_TO_KILOMETERS
 
@@ -177,15 +177,15 @@ def kilometers_to_miles (kilometers: float) -> float:
     """
     Convert a length from kilometers to miles.
         
-            Parameters
-            ----------
-            kilometers: float
-                Length in kilometers.
+    Parameters
+    ----------
+    kilometers: float
+        Length in kilometers.
             
-            Returns
-            -------
-            float
-                Length in miles.
+    Returns
+    -------
+    float
+        Length in miles.
     """
     return kilometers / MILES_TO_KILOMETERS
 
@@ -193,15 +193,15 @@ def centimeters_to_inches(centimeters: float) -> float:
     """
      Convert a length from centimeters to inches.
             
-                Parameters
-                ----------
-                centimeters: float
-                    Length in centimeters.
+    Parameters
+    ----------
+    centimeters: float
+        Length in centimeters.
                 
-                Returns
-                -------
-                float
-                    Length in inches.
+    Returns
+    -------
+    float
+        Length in inches.
     """
 
     return centimeters / CENTIMETERS_PER_INCH

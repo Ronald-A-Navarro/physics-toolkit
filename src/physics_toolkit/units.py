@@ -388,3 +388,19 @@ def seconds_to_hours(seconds: float) -> float:
         time in hours.
     """
     return seconds / 3600
+
+def minutes_to_hours(minutes: float) -> float:
+    """
+    Convert time from seconds to hours.
+
+    Parameters
+    ----------
+    seconds : float
+        time in seconds.
+
+    Returns
+    -------
+    float
+        time in hours.
+    """
+    return minutes / 60

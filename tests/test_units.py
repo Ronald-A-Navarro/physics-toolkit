@@ -21,6 +21,7 @@ from physics_toolkit.units import (
     meters_to_feet,
     meters_to_kilometers,
     miles_to_kilometers,
+    minutes_to_hours,
     pounds_to_kilograms,
     seconds_to_hours,
 )
@@ -373,3 +374,19 @@ def test_seconds_to_hours_two():
 
 def test_seconds_to_hours_half():
     assert seconds_to_hours(1800) == 0.5
+
+
+def test_minutes_to_hours_zero():
+    assert minutes_to_hours(0) == 0
+
+
+def test_minutes_to_hours_one_hour():
+    assert minutes_to_hours(60) == 1
+
+
+def test_minutes_to_hours_two_hours():
+    assert minutes_to_hours(120) == 2
+
+
+def test_minutes_to_hours_half_hour():
+    assert minutes_to_hours(30) == 0.5

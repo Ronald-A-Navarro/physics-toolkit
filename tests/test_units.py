@@ -9,6 +9,7 @@ from physics_toolkit.units import (
     fahrenheit_to_kelvin,
     feet_to_meters,
     grams_to_kilograms,
+    hours_to_seconds,
     inches_to_centimeters,
     kelvin_to_celsius,
     kelvin_to_fahrenheit,
@@ -339,3 +340,19 @@ def test_pounds_to_kilograms_below_hundred():
 
 def test_pounds_to_kilograms_above_hundred():
     assert pounds_to_kilograms(264.5547148) == pytest.approx(120)
+
+
+def test_hours_to_seconds_zero():
+    assert hours_to_seconds(0) == 0
+
+
+def test_hours_to_seconds_one():
+    assert hours_to_seconds(1) == 3600
+
+
+def test_hours_to_seconds_two():
+    assert hours_to_seconds(2) == 7200
+
+
+def test_hours_to_seconds_ten():
+    assert hours_to_seconds(10) == 36000

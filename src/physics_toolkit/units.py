@@ -354,3 +354,21 @@ def pounds_to_kilograms(pounds: float) -> float:
         mass in kilograms.
     """
     return pounds * KILOGRAMS_PER_POUND
+
+# Time
+
+def hours_to_seconds(hours: float) -> float:
+    """
+    Convert time from hours to seconds.
+
+    Parameters
+    ----------
+    hours : float
+        time in hours.
+
+    Returns
+    -------
+    float
+        time in seconds.
+    """
+    return hours * 3600

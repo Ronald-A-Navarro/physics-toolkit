@@ -372,3 +372,19 @@ def hours_to_seconds(hours: float) -> float:
         time in seconds.
     """
     return hours * 3600
+
+def seconds_to_hours(seconds: float) -> float:
+    """
+    Convert time from seconds to hours.
+
+    Parameters
+    ----------
+    seconds : float
+        time in seconds.
+
+    Returns
+    -------
+    float
+        time in hours.
+    """
+    return seconds / 3600
